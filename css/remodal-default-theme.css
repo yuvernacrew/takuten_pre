@@ -17,7 +17,8 @@
 
 .remodal-overlay.remodal-is-opening,
 .remodal-overlay.remodal-is-closing {
-  animation-duration: 0.3s;
+  animation-delay: 8s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 
@@ -86,7 +87,7 @@
   padding: 0;
 
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color 0.8s;
   text-decoration: none;
 
   color: #95979c;
@@ -131,7 +132,7 @@
   padding: 12px 0;
 
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.8s;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -226,7 +227,7 @@
 
 @media only screen and (min-width: 641px) {
   .remodal {
-    max-width: 700px;
+    max-width: 840px;
   }
 }
 

@@ -64,7 +64,17 @@
   position: relative;
 }
 
+.l-bottom-10 {
+  margin-bottom: 10px;
+}
 
+.l-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.l-bottom-40 {
+  margin-bottom: 40px;
+}
 /* 中央寄せ */
 
 .flexbox{
