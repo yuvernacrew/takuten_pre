@@ -4,103 +4,69 @@ $(function(){
   // 卓
   var group = [
     {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/taku.png`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
+      name : '卓1',
+      imgUrl: `${DIR_IMAGE}/taku_logo.jpg`,
+      slide: "https://www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
+      url: "https://www.slideshare.net/ItoYuki2/2017-75427213",
+      disc : `卓1ですこんにちはこんにちは`
     },
     {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
+      name : '卓2',
+      imgUrl: `${DIR_IMAGE}/taku_logo.jpg`,
+      slide: "https://www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
+      url: "https://www.slideshare.net/ItoYuki2/2017-75427213",
+      disc : `卓2ですこんにちはこんにちは`
     },
     {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
+      name : '卓3',
+      imgUrl: `${DIR_IMAGE}/taku_logo.jpg`,
+      slide: "https://www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
+      url: "https://www.slideshare.net/ItoYuki2/2017-75427213",
+      disc : `卓3ですこんにちはこんにちは`
     },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-        {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    },
-    {
-      name : 'paplica',
-      img: `${DIR_IMAGE}/ceese`,
-      slide: "//www.slideshare.net/slideshow/embed_code/key/rhIYkBYQFRWEKm",
-      url: "//www.slideshare.net/ItoYuki2/2017-75427213",
-      disc : `Hello,world`
-    }
-  ]
+  ];
 
+  // ロゴをランダムに表示する
+  var numArray = [];
+  for(var i = 0 ; i < group.length ; i++){
+    numArray.push(i);
+  }
+
+  var a = numArray.length;
+  while (a) {
+    var j = Math.floor( Math.random() * a );
+    var t = numArray[--a];
+    numArray[a] = numArray[j];
+    numArray[j] = t;
+  };
+  console.log(numArray);
+
+
+  for(var i = 0 ; i < group.length ; i++){
+    var num = numArray[i];
+    var imgUrl = group[num].imgUrl;
+    $('.logo-container').append(`<a href='#modal'><img class='remodal-btn' id='${num}' src='${imgUrl}'/></a>`);
+  }
 
    //モーダルの中身
-   $('.pc-popcorn-btn').click(function(){
-     $('.remodal').children("h3, img, p, span").remove();
+   $('.remodal-btn').on("click", function(){
+     $('.remodal').children(".remodal-contents").remove();
 
-     var name = part[$(this).attr('id')].partname;
-     var title = part[$(this).attr('id')].title;
-     var text = part[$(this).attr('id')].text;
-     var leader = part[$(this).attr('id')].leader;
+     var name = group[$(this).attr('id')].name;
+     var img = group[$(this).attr('id')].imgUrl;
+     var slide = group[$(this).attr('id')].slide;
+     var url = group[$(this).attr('id')].url;
+     var disc = group[$(this).attr('id')].disc;
 
      $('.remodal').append(
-       `<h3 class='modal-heading'>〜${title}〜</h3>
-       <p class='modal-text'>${text}</p>
-       <img class='modal-img' src='img/photo/photo-${name}.png'/>
-       <span class='modal-span'>${leader}</span>`
+       `<div class="remodal-contents">
+          <p>${name}</p>
+          <img src="${img}">
+          <iframe src="${slide}" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+          <p>${disc}</p>
+        </div>`
+     );
 
-     )
+     $('[data-remodal-id=modal]').remodal();
    });
-
-
-  $('.popcorn-btn').click(function(){
-    var name = part[$(this).attr('id')].partname;
-    var text = part[$(this).attr('id')].text;
-
-    $('.bg-job').css('background-image','url("./img/icon/icon-' + name + '.png")')
-
-    $('.text-container p').html(text);
-  });
 });
