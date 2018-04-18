@@ -4,24 +4,49 @@ $(function(){
   // 卓
   var group = [
     {
-      id: 'modal01',
-      name : '卓1',
-      imgUrl: `${DIR_IMAGE}/taku_logo.png`,
+      id: 'ririri',
+      name : 'リリリ',
+      imgUrl: `${DIR_IMAGE}/rerere.png`,
     },
     {
-      id: 'modal02',
-      name : '卓2',
+      id: 'lqqp',
+      name : 'LQQP',
+      imgUrl: `${DIR_IMAGE}/LQQP.png`,
+    },
+    {
+      id: 'cetrois',
+      name : 'CETROIS',
+      imgUrl: `${DIR_IMAGE}/cetrois.png`,
+    },
+    {
+      id: 'asso',
+      name : 'asso',
+      imgUrl: `${DIR_IMAGE}/asso.png`,
+    },
+    {
+      id: 'dotus',
+      name : 'dotus',
+      imgUrl: `${DIR_IMAGE}/dotus.png`,
+    },
+    {
+      id: 'ideal',
+      name : 'ideal',
+      imgUrl: `${DIR_IMAGE}/ideal.png`,
+    },
+    {
+      id: 'mico',
+      name : 'mico',
+      imgUrl: `${DIR_IMAGE}/mico.png`,
+    },
+    {
+      id: 'paplica',
+      name : 'paplica',
       imgUrl: `${DIR_IMAGE}/paplica.png`,
     },
     {
-      id: 'modal03',
-      name : '卓3',
-      imgUrl: `${DIR_IMAGE}/taku_logo.png`,
-    },
-    {
-      id: 'modal04',
-      name : '卓4',
-      imgUrl: `${DIR_IMAGE}/paplica.png`,
+      id: 'ZAxis',
+      name : 'ZAxis',
+      imgUrl: `${DIR_IMAGE}/ZAxis.png`,
     }
   ];
 
