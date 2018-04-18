@@ -11,7 +11,7 @@ $(function(){
     {
       id: 'modal02',
       name : '卓2',
-      imgUrl: `${DIR_IMAGE}/taku_logo.png`,
+      imgUrl: `${DIR_IMAGE}/paplica.png`,
     },
     {
       id: 'modal03',
@@ -21,7 +21,7 @@ $(function(){
     {
       id: 'modal04',
       name : '卓4',
-      imgUrl: `${DIR_IMAGE}/taku_logo.png`,
+      imgUrl: `${DIR_IMAGE}/paplica.png`,
     }
   ];
 
