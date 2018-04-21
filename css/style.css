@@ -49,7 +49,7 @@ a img {
 .group-slide::before {
   content:"";
   display: block;
-  padding-top: 82%;
+  padding-top: 80.5%;
 }
 
 .group-iframe {
@@ -68,13 +68,17 @@ a img {
     margin-left: 3%;
   }
   .mv-container .logo {
-    width: 80%;
-    margin: 0 0 40px 10%;
-    padding-top: 80px;
+    width: 70%;
+    margin: 0 0 20px 15%;
+    padding-top: 40px;
   }
 
   .remodal {
-    padding: 6% !important;
+    padding: 2% !important;
+  }
+
+  .group-discription {
+    padding: 0 6%;
   }
 
   .group-logo-container img{
@@ -82,8 +86,18 @@ a img {
     text-align: center;
   }
 
+  .group-slide::before {
+    content:"";
+    display: block;
+    padding-top: 83%;
+  }
+
+  .group-iframe {
+    border: none;
+  }
+
   .group-slide {
     width: 100%;
-    margin: 0;
+    margin: 0 0 20px 0;
   }
 }

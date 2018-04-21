@@ -47,6 +47,16 @@ $(function(){
       id: 'ZAxis',
       name : 'ZAxis',
       imgUrl: `${DIR_IMAGE}/ZAxis.png`,
+    },
+    {
+      id: 'Charamel',
+      name : 'Charamel',
+      imgUrl: `${DIR_IMAGE}/Charamel.png`,
+    },
+    {
+      id: 'Ex',
+      name : 'Ex',
+      imgUrl: `${DIR_IMAGE}/Ex.png`,
     }
   ];
 
