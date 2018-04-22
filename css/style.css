@@ -32,6 +32,11 @@ a img {
   font-size: 2rem;
 }
 
+.logo-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
 .remodal-btn {
   cursor: pointer;
 }
@@ -71,6 +76,11 @@ a img {
     width: 70%;
     margin: 0 0 20px 15%;
     padding-top: 40px;
+  }
+
+  .logo-container {
+    width: 100%;
+    margin-left: 0;
   }
 
   .remodal {

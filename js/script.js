@@ -57,6 +57,16 @@ $(function(){
       id: 'Ex',
       name : 'Ex',
       imgUrl: `${DIR_IMAGE}/Ex.png`,
+    },
+    {
+      id: 'ME',
+      name : 'ME',
+      imgUrl: `${DIR_IMAGE}/ME.png`,
+    },
+    {
+      id: 'thad',
+      name : 'thad',
+      imgUrl: `${DIR_IMAGE}/thad.png`,
     }
   ];
 
