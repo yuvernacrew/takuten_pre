@@ -1,5 +1,5 @@
 $(function(){
-  const DIR_IMAGE = "img/"
+  const DIR_IMAGE = "img"
 
   // 卓
   var group = [
@@ -107,8 +107,16 @@ $(function(){
 
     $('.logo-container').append(`
       <div class="column is-one-fifth-desktop is-half-mobile is-multiline">
-      <a data-remodal-target="${id}"><img class='remodal-btn' id='${num}' src='${imgUrl}' alt="${name}のロゴ"/></a>
+      <a data-remodal-target="${id}" ><img class='remodal-btn' id='${id}' src='${imgUrl}' alt="${name}のロゴ"/></a>
       </div>`
     );
   }
+
+    var clickId;
+    $('.remodal-btn').on('click',function(){
+      clickId = $(this).attr('id');
+      gtag('event', 'click',
+      {'event_category': clickId,
+       'value': '1'});
+    });
 });

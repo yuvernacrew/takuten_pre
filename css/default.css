@@ -1,4 +1,7 @@
-
+body {
+  font-family: "Rounded Mplus 1c";
+  line-height: 1.8;
+}
 /* font-size */
 .font-xxsmall {
   font-size: 8px;
